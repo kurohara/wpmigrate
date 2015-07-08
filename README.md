@@ -31,7 +31,12 @@ So you may need the way to 'flick' your TEST SITE with your RUNNING SITE.
      ``` ./importwww.mycompany.com~wordpress.sh ```
 1. You've done.
 
-On creating symbolic links, if your site address(local testing or hosted runnning) have '/' character, it can be replaced to '~' character.  
+* On creating symbolic links, if your site address(local testing or hosted runnning) have '/' character, it can be replaced to '~' character.  
+* If your 'running' site have not have the database setup, you may be able to use 'createdb.sh' for set up one.
+  This script uses OS Auth of MySQL database by default, but if you set up MySQL database to use password auth only, you can tell the password to this script like,  
+  ``` rootpasswd=password_for_root_user_of_mysql ./createdb.sh ```
+  or you may want to type the password interactively, do  
+  ``` rootpasswd=" " ./createdb.sh ```
 
 Author: Hiroyoshi Kurohara(Microgadget,inc.)  
    http://www.microgadget-inc.com/
